@@ -69,16 +69,22 @@ function handleBackspace(inputFields) {
 
 function colorWord(inputFields, word) {
     let temp = Object.assign({}, freqCharsOfWord)
+
     for (j = 0; j < 5; j++) {
         let currInputField = inputFields[5*currLine + j]
         if (word[j] === wordOfTheDay[j]) {
             colorInputField(currInputField, "green")
+            freqCharsOfWord[word[j]]--;
+            console.log(freqCharsOfWord)
         }
-        else if (word[j] in freqCharsOfWord) {
-            if (freqCharsOfWord[word[j]] === 0) {
+    }
+    for (j = 0; j < 5; j++) {
+        let currInputField = inputFields[5*currLine + j]
+        if (word[j] in freqCharsOfWord) {
+            if (freqCharsOfWord[word[j]] === 0 && word[j] !== wordOfTheDay[j]) {
                 colorInputField(currInputField, "grey")
             }
-            else {
+            else if (word[j] !== wordOfTheDay[j]) {
                 colorInputField(currInputField, "yellow")
                 freqCharsOfWord[word[j]]--;
             }
