@@ -2,6 +2,7 @@ let place = 0
 let currLine = 0
 let word = ""
 const ROWLENGTH = 5
+let done = false
 
 const wordOfTheDayURL = "https://words.dev-apis.com/word-of-the-day"
 let freqCharsOfWord = {};
@@ -98,8 +99,10 @@ function colorWord(inputFields, word) {
 function handleEnter(inputFields) {
     if (word.length === ROWLENGTH) {
         if (word === wordOfTheDay) {
+            done = true
             alert("YOU WIN")
         } else if (currLine === 5) {
+            done = true
             alert("YOU LOSE")
         }
 
@@ -131,14 +134,16 @@ function init(wordOfTheDay) {
     let inputFields = document.querySelectorAll(".char-input");
 
     document.addEventListener("keydown", (event) => {
-        if (isLetter(event.key)) {
-            handleLetter(event.key, inputFields[ROWLENGTH * currLine + place]);
-        }
-        else if (event.key === "Backspace") {
-            handleBackspace(inputFields);
-        }
-        else if (event.key === "Enter") {
-            handleEnter(inputFields);
+        if (!done) {
+            if (isLetter(event.key)) {
+                handleLetter(event.key, inputFields[ROWLENGTH * currLine + place]);
+            }
+            else if (event.key === "Backspace") {
+                handleBackspace(inputFields);
+            }
+            else if (event.key === "Enter") {
+                handleEnter(inputFields);
+            }
         }
     });
 }
