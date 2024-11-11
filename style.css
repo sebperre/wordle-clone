@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.char-input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 40px;
+    caret-color: transparent;
+    cursor: default;
+    border: black;
+    border: solid;
+}
+
+.char-input:focus {
+    border: black;
+    outline: none; /* Ensure there’s no darker outline */
+    border: solid;
+}
+
+.animate {
+    animation-name: example;
+    animation-duration: 0.5s;
+    /* transition: transform 0.5s ease; */
+    /* transform: scale(1.2); */
+}
+
+@keyframes example {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+}
