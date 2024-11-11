@@ -1,4 +1,4 @@
-# Calculator
+# Wordle Clone
 
 ## Overview
 
@@ -8,7 +8,7 @@ This Wordle clone is a web-based word-guessing game where players try to guess a
 - Yellow: The letter is in the word but in the wrong position.
 - Gray: The letter is not in the word.
 
-The game provides a new word each day (or each session in some versions).
+The game provides a new word each time you refresh the page.
 
 <p align="center">
   <img src="wordle-preview.png" />
@@ -16,8 +16,8 @@ The game provides a new word each day (or each session in some versions).
 
 ## Features
 
-- **Simplistic Frontend Design**: Easy to use and play,
-- **New Word Every Day**: A new word is generated every day
+- **Simplistic Frontend Design**: Easy to use and play
+- **New Word Every Refresh**: A new word everytime you refresh the page
 
 ## Tech Stack
 1. HTML
