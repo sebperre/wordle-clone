@@ -75,7 +75,6 @@ function colorWord(inputFields, word) {
         if (word[j] === wordOfTheDay[j]) {
             colorInputField(currInputField, "green")
             freqCharsOfWord[word[j]]--;
-            console.log(freqCharsOfWord)
         }
     }
     for (j = 0; j < 5; j++) {
@@ -150,7 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
         for (const char of wordOfTheDay) {
             freqCharsOfWord[char] = (freqCharsOfWord[char] || 0) + 1;
         }
-        console.log(wordOfTheDay)
         document.getElementById("loadingScreen").style.display = "none";
         document.getElementById("content").style.display = "block";
         init();
