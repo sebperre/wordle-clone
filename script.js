@@ -4,7 +4,7 @@ let word = ""
 const ROWLENGTH = 5
 let done = false
 
-const wordOfTheDayURL = "https://words.dev-apis.com/word-of-the-day"
+const wordOfTheDayURL = "https://words.dev-apis.com/word-of-the-day?random=1"
 let freqCharsOfWord = {};
 let wordOfTheDay;
 
@@ -100,10 +100,11 @@ function handleEnter(inputFields) {
     if (word.length === ROWLENGTH) {
         if (word === wordOfTheDay) {
             done = true
-            alert("YOU WIN")
+            document.querySelector(".title").classList.add("winner")
+            alert("YOU WIN. Reload the Page to Play Again.")
         } else if (currLine === 5) {
             done = true
-            alert("YOU LOSE")
+            alert("YOU LOSE. Reload the Page to Play Again.")
         }
 
         document.getElementById("loadingScreen").style.display = "block";
