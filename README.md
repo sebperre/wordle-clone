@@ -1,6 +1,6 @@
 # Wordle Clone
 
-## Overview
+## Overview 🧭
 
 This Wordle clone is a web-based word-guessing game where players try to guess a hidden word within a limited number of attempts, six. Each guess must be a valid word of a fixed length (five letters). After each guess, the game provides feedback by coloring the tiles:
 
@@ -14,20 +14,15 @@ The game provides a new word each time you refresh the page.
   <img src="wordle-preview.png" />
 </p>
 
-## Features
+## Features 🔧
 
 - **Simplistic Frontend Design**: Easy to use and play
 - **New Word Every Refresh**: A new word everytime you refresh the page
 
-## Tech Stack
-1. HTML
-2. CSS
-3. JavaScript
+## Usage 🛠️
 
-## Usage
+Clone the repository and open index.html
 
-Download the code and open index.html
-
-## License
+## License 📄
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
